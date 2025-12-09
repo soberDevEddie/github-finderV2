@@ -28,7 +28,7 @@ const UserCard = ({ user }: { user: GithubUser }) => {
     },
   });
 
-  // Mutation to follow the user
+  // Mutation to unfollow the user
   const unfollowMutation = useMutation({
     mutationFn: () => unfollowGithubUser(user.login),
     onSuccess: () => {
@@ -63,7 +63,7 @@ const UserCard = ({ user }: { user: GithubUser }) => {
           {isFollowing ? (
             <>
               <FaUserMinus className='follow-icon' />
-              Following
+              Unfollow
             </>
           ) : (
             <>

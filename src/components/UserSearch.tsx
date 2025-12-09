@@ -67,7 +67,7 @@ const UserSearch = () => {
           {showSuggestions && suggestions?.length > 0 && (
             <SuggestionsDropdown
               suggestions={suggestions}
-              show={setShowSuggestions}
+              show={showSuggestions}
               onSelect={(selected) => {
                 setUsername(selected);
                 setShowSuggestions(false);
